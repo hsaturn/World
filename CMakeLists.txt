@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.4.0)
+cmake_minimum_required(VERSION 3.0)
 
 project(world)
 
@@ -6,10 +6,10 @@ set(CMAKE_BUILD_TYPE Debug)
 set(INSTALL_PKGCONFIG_DIR "${CMAKE_INSTALL_PREFIX}/share/pkgconfig" CACHE PATH "Installation directory for pkgconfig (.pc) files")
 
 # Find source files
-file(GLOB SOURCES src/*.cpp)
+file(GLOB SOURCES core/*.cpp external/*.cpp external/common/*.cpp)
 
 # Include header files
-include_directories(include /usr/local/include/SaturnLib)
+include_directories(core/include external /usr/local/include/SaturnLib /usr/include/GLFW)
 link_directories(/usr/local/lib/SaturnLib)
 
 # Create shared library
@@ -22,4 +22,5 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # file(GLOB HEADERS include/*.h)
 # install(FILES ${HEADERS} DESTINATION include/${PROJECT_NAME})
 
-target_link_libraries(world SaturnLib)
+file(COPY shaders DESTINATION shaders)
+target_link_libraries(world SaturnLib glfw GLEW GL)

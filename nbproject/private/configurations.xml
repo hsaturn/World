@@ -1,26 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="97">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
-    <df root="/home/hsaturn/Projets/C++/World" name="0">
+    <df root="." name="0">
+      <df name="build">
+        <df name="CMakeFiles">
+          <df name="3.5.1">
+            <df name="CompilerIdC">
+              <in>CMakeCCompilerId.c</in>
+            </df>
+            <df name="CompilerIdCXX">
+              <in>CMakeCXXCompilerId.cpp</in>
+            </df>
+          </df>
+          <df name="CMakeTmp">
+          </df>
+          <df name="world.dir">
+            <df name="core">
+            </df>
+            <df name="external">
+              <df name="common">
+              </df>
+            </df>
+          </df>
+          <in>feature_tests.c</in>
+          <in>feature_tests.cxx</in>
+        </df>
+      </df>
       <df name="CMakeFiles">
-        <df name="3.5.1">
-          <df name="CompilerIdC">
-            <in>CMakeCCompilerId.c</in>
-          </df>
-          <df name="CompilerIdCXX">
-            <in>CMakeCXXCompilerId.cpp</in>
-          </df>
-        </df>
-        <df name="CMakeTmp">
-        </df>
-        <df name="Progress">
-        </df>
         <df name="world.dir">
-          <df name="src">
+          <df name="core">
+            <df name="src">
+              <in>object.o</in>
+            </df>
+            <in>main.o</in>
+          </df>
+          <df name="external">
+            <df name="common">
+              <in>controls.o</in>
+              <in>objloader.o</in>
+              <in>quaternion_utils.o</in>
+              <in>shader.o</in>
+              <in>tangentspace.o</in>
+              <in>text2D.o</in>
+              <in>texture.o</in>
+              <in>vboindexer.o</in>
+            </df>
           </df>
         </df>
-        <in>feature_tests.c</in>
-        <in>feature_tests.cxx</in>
       </df>
       <df name="core">
         <df name="include">
@@ -60,12 +86,36 @@
         <in>npc.cpp</in>
         <in>npc.h</in>
       </df>
-      <df name="src">
-        <in>object.cpp</in>
+      <df name="external">
+        <df name="common">
+          <in>controls.cpp</in>
+          <in>controls.hpp</in>
+          <in>objloader.cpp</in>
+          <in>objloader.hpp</in>
+          <in>quaternion_utils.cpp</in>
+          <in>quaternion_utils.hpp</in>
+          <in>shader.cpp</in>
+          <in>shader.hpp</in>
+          <in>tangentspace.cpp</in>
+          <in>tangentspace.hpp</in>
+          <in>text2D.cpp</in>
+          <in>text2D.hpp</in>
+          <in>texture.cpp</in>
+          <in>texture.hpp</in>
+          <in>vboindexer.cpp</in>
+          <in>vboindexer.hpp</in>
+        </df>
+        <df name="png_texture">
+          <in>png_texture.cpp</in>
+          <in>png_texture.hpp</in>
+        </df>
+      </df>
+      <df name="shaders">
       </df>
     </df>
+    <itemPath>README.md</itemPath>
   </logicalFolder>
-  <projectmakefile>/home/hsaturn/Projets/C++/World/Makefile</projectmakefile>
+  <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Default" type="0">
       <toolsSet>

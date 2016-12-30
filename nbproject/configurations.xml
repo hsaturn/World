@@ -1,43 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="97">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
-    <df root="/home/hsaturn/Projets/C++/World" name="0">
+    <df root="." name="0">
+      <df name="CMakeFiles">
+        <df name="world.dir">
+          <df name="core">
+            <df name="src">
+              <in>object.o</in>
+            </df>
+            <in>main.o</in>
+          </df>
+          <df name="external">
+            <df name="common">
+              <in>controls.o</in>
+              <in>objloader.o</in>
+              <in>quaternion_utils.o</in>
+              <in>shader.o</in>
+              <in>tangentspace.o</in>
+              <in>text2D.o</in>
+              <in>texture.o</in>
+              <in>vboindexer.o</in>
+            </df>
+          </df>
+        </df>
+      </df>
       <df name="core">
+        <df name="src">
+          <in>object.cpp</in>
+        </df>
         <in>main.cpp</in>
       </df>
-      <df name="cp">
-        <in>StringUtil.cpp</in>
-        <in>action.cpp</in>
-        <in>action_buy.cpp</in>
-        <in>action_harvest.cpp</in>
-        <in>action_mix.cpp</in>
-        <in>bot.cpp</in>
-        <in>bot_conf.cpp</in>
-        <in>bot_lib.cpp</in>
-        <in>coord.cpp</in>
-        <in>foo.cpp</in>
-        <in>get.cpp</in>
-        <in>item.cpp</in>
-        <in>map.cpp</in>
-        <in>npc.cpp</in>
-      </df>
-      <df name="src">
-        <in>object.cpp</in>
+      <df name="external">
+        <df name="common">
+          <in>controls.cpp</in>
+          <in>objloader.cpp</in>
+          <in>quaternion_utils.cpp</in>
+          <in>shader.cpp</in>
+          <in>tangentspace.cpp</in>
+          <in>text2D.cpp</in>
+          <in>texture.cpp</in>
+          <in>vboindexer.cpp</in>
+        </df>
       </df>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
-      <itemPath>/home/hsaturn/Projets/C++/World/Makefile</itemPath>
-      <itemPath>/home/hsaturn/Projets/C++/World/nbproject/private/launcher.properties</itemPath>
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
     </logicalFolder>
+    <itemPath>README.md</itemPath>
   </logicalFolder>
   <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
   <sourceRootList>
-    <Elem>/home/hsaturn/Projets/C++/World</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
-  <projectmakefile>/home/hsaturn/Projets/C++/World/Makefile</projectmakefile>
+  <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Default" type="0">
       <toolsSet>
@@ -45,100 +64,190 @@
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0"
+                 commonFlags="-mtune=generic -march=x86-64 -fstack-protector-strong"/>
+      </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
       <makefileType>
         <makeTool>
-          <buildCommandWorkingDir>/home/hsaturn/Projets/C++/World</buildCommandWorkingDir>
+          <buildCommandWorkingDir>build</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath></executablePath>
         </makeTool>
         <preBuild>
-          <preBuildCommandWorkingDir>/home/hsaturn/Projets/C++/World</preBuildCommandWorkingDir>
-          <preBuildCommand>cmake .</preBuildCommand>
+          <preBuildCommandWorkingDir>NewFolder</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
-      <item path="/home/hsaturn/Projets/C++/World/core/main.cpp"
+      <item path="CMakeFiles/world.dir/core/main.o" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/core/src/object.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/external/common/controls.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/external/common/objloader.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/external/common/quaternion_utils.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/external/common/shader.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/external/common/tangentspace.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/external/common/text2D.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/external/common/texture.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="CMakeFiles/world.dir/external/common/vboindexer.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="core/main.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>core</pElem>
+            <pElem>/usr/include/glm/detail</pElem>
+            <pElem>/usr/include/glm/gtc</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>/usr/include/GLFW</pElem>
+            <pElem>/usr/include/glm</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="core/src/object.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="external/common/controls.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glm/detail</pElem>
+            <pElem>/usr/include/glm/gtc</pElem>
+            <pElem>/usr/include/GLFW</pElem>
+            <pElem>/usr/include/glm</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="external/common/objloader.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glm/detail</pElem>
+            <pElem>/usr/include/glm</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="external/common/quaternion_utils.cpp"
             ex="false"
             tool="1"
             flavor2="0">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glm/detail</pElem>
+            <pElem>/usr/include/glm/gtx</pElem>
+            <pElem>/usr/include/glm/gtc</pElem>
+            <pElem>/usr/include/glm</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
       </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/StringUtil.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
+      <item path="external/common/shader.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
       </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/action.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
+      <item path="external/common/tangentspace.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glm/detail</pElem>
+            <pElem>/usr/include/glm</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
       </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/action_buy.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
+      <item path="external/common/text2D.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glm/detail</pElem>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>/usr/include/glm</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
       </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/action_harvest.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
+      <item path="external/common/texture.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/include/GL</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
       </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/action_mix.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
+      <item path="external/common/vboindexer.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/include/glm/detail</pElem>
+            <pElem>/usr/include/glm</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </ccTool>
       </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/bot.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/bot_conf.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/bot_lib.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/coord.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/foo.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/get.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/item.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/map.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/cp/npc.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/hsaturn/Projets/C++/World/src/object.cpp"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
+      <folder path="0/CMakeFiles">
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/core/src">
+        <ccTool>
+          <incDir>
+            <pElem>core/src</pElem>
+            <pElem>core/include</pElem>
+            <pElem>/usr/local/include/SaturnLib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/external">
+        <ccTool>
+          <incDir>
+            <pElem>external/common</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
     </conf>
   </confs>
 </configurationDescriptor>

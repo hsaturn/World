@@ -1,0 +1,11 @@
+called: /usr/bin/c++
+	/home/hsaturn/Projets/C++/World
+	/usr/bin/c++
+	-I/home/hsaturn/Projets/C++/World/core/include
+	-I/usr/local/include/SaturnLib
+	-g
+	-o
+	CMakeFiles/world.dir/core/src/object.o
+	-c
+	/home/hsaturn/Projets/C++/World/core/src/object.cpp
+

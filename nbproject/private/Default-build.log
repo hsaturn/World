@@ -1,0 +1,10 @@
+[ 50%] Building CXX object CMakeFiles/world.dir/core/src/object.o
+/home/hsaturn/Projets/C++/World/core/src/object.cpp:55:74: error: no ‘void Object<T>::parseLongName(CFileParser*, const string&)’ member function declared in class ‘Object<T>’
+ void Object<T>::parseLongName(CFileParser* poParser, const string &sClass)
+                                                                          ^
+CMakeFiles/world.dir/build.make:62 : la recette pour la cible « CMakeFiles/world.dir/core/src/object.o » a échouée
+make[2]: *** [CMakeFiles/world.dir/core/src/object.o] Erreur 1
+CMakeFiles/Makefile2:67 : la recette pour la cible « CMakeFiles/world.dir/all » a échouée
+make[1]: *** [CMakeFiles/world.dir/all] Erreur 2
+Makefile:83 : la recette pour la cible « all » a échouée
+make: *** [all] Erreur 2

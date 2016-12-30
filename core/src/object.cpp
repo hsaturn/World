@@ -51,21 +51,4 @@ T* Object<T>::factory(CFileParser* poParser)
 	return poObject;
 }
 
-template <class T>
-void Object<T>::parseLongName(CFileParser* poParser, const string &sClass)
-{
-	if(poParser->peekChar()==',')
-	{
-		poParser->getNextChar();
-		string sLongName=poParser->getNextString(sClass+" long name");
-		if (sLongName==msLongName || msLongName.length()==0)
-		{
-			msLongName=sLongName;
-		}
-		else
-		{
-			poParser->throw_("Long name defined twice but are not the same !");
-		}
-	}
-}
 
