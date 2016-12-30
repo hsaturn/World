@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="/home/hsaturn/Projets/C++/World" name="0">
+      <df name="core">
+        <in>main.cpp</in>
+      </df>
+      <df name="cp">
+        <in>StringUtil.cpp</in>
+        <in>action.cpp</in>
+        <in>action_buy.cpp</in>
+        <in>action_harvest.cpp</in>
+        <in>action_mix.cpp</in>
+        <in>bot.cpp</in>
+        <in>bot_conf.cpp</in>
+        <in>bot_lib.cpp</in>
+        <in>coord.cpp</in>
+        <in>foo.cpp</in>
+        <in>get.cpp</in>
+        <in>item.cpp</in>
+        <in>map.cpp</in>
+        <in>npc.cpp</in>
+      </df>
+      <df name="src">
+        <in>object.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>/home/hsaturn/Projets/C++/World/Makefile</itemPath>
+      <itemPath>/home/hsaturn/Projets/C++/World/nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>/home/hsaturn/Projets/C++/World</Elem>
+  </sourceRootList>
+  <projectmakefile>/home/hsaturn/Projets/C++/World/Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>/home/hsaturn/Projets/C++/World</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>/home/hsaturn/Projets/C++/World</preBuildCommandWorkingDir>
+          <preBuildCommand>cmake .</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="/home/hsaturn/Projets/C++/World/core/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/StringUtil.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/action.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/action_buy.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/action_harvest.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/action_mix.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/bot.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/bot_conf.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/bot_lib.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/coord.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/foo.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/get.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/item.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/map.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/cp/npc.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/hsaturn/Projets/C++/World/src/object.cpp"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

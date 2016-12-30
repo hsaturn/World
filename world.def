@@ -1,0 +1,178 @@
+// _xxx = stock
+// _energy
+
+// Bois
+material wood1
+{
+	color: brown;
+	density: 0.7;
+	measure: k;
+
+	use for fire
+	{
+		_energy: 10j;
+		output
+		{
+			_ernergy: 100j;
+			rate: 1s;
+		}
+	}
+}
+
+material gold
+{
+	color: gold;
+	density: 19.3;
+
+	measure: k;
+}
+
+material steel // acier
+{
+	density: 7.5;
+	color: steel;
+
+	build
+	{
+		_quantity: 100;
+		_energy: 100;	// calcul selon densité / text, tfusion ?
+
+		needs
+		{
+			iron:	98
+			carbon: 2	// 100-$iron;
+		}
+
+	}
+
+	measure: k;
+}
+	
+// Piece or
+item coin_gold_1
+{
+	3d
+	{
+		material: gold;
+		cylinder 20mm,1mm;		//  2cm x  1mm height (centered)
+	}
+
+	measure: unit;
+}
+
+// Manche en bois
+item wood_handle
+{
+	3d
+	{
+		// weight auto by material density x volume
+		material wood1;
+		cylinder 40x25mm, 45cm;	// ellipse 4cmx2.5cm height 45cm
+	}
+}
+
+// Lame de hache
+item axe_blade_1
+{
+	3d
+	{
+		material: steel;
+		box: 50,40,50;
+	}
+
+}
+
+item axe_simple
+{
+	3d
+	{
+		item wood_handle;
+		item axe_blade_1
+		{
+			offset 0,0,wood_handle.height-axe_blade_1.height*1.2;
+		}
+	}
+}
+
+item coal
+{
+	density: 1.45;
+	3d {}
+
+	// etincelle + oxygen = _energy
+
+	use for energy
+	{
+		_energy: 100j;	// Apport en energy pour 1 (quoi ? unité)
+		_oxygen: 1;	// 1 quoi ?
+
+		output
+		{
+			_ernergy: 1000j;
+			_rate: 1s;	// Consomme 100j/sec, renvoie 1000j/sec pour 1 unité
+
+			3d { fire }
+		}
+	}
+
+	measure: k;
+}
+
+item water
+{
+	density: 1;
+
+	3d { ??? plugin water }
+
+	use for oxygen, hydrogen
+	{
+		_electricity: ?;
+		needs { electrode { quantity: 2 } }
+		output
+		{
+			hydrogen: 1;
+			oxygen: 2;
+		}
+	}
+}
+
+item fire
+{
+	density: 0.01;
+	3d { ??? plugin fire }
+
+}
+
+item wheel
+{
+}
+
+item car
+{
+	density: auto;
+
+	3d
+	{
+		box box wheel wheel wheel wheel
+	}
+
+	use for _movement
+	{
+		output
+		{
+			_movement: k.m.s-1;
+		}
+	}
+
+	build
+	{
+		needs
+		{
+			steel: 500k;
+			plastic: 100k;
+			wire: 1km;
+		}
+	}
+}
+
+

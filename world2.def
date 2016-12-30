@@ -1,0 +1,175 @@
+
+item wheel
+{
+	draw 3d
+	{
+		cylinder_
+		{
+			60cm 20cm
+			texture black wheel.png
+			rotate { 1 0 0 }
+		}
+	}
+}
+
+// +---+  +--> x
+// |   |  |
+// |   |  v y
+// |   |
+// |   |
+// |   |
+// +---+
+
+item car(color)
+{
+	draw 3d
+	{
+		pyramid
+		{
+			4.5m 190cm
+			4.m  190cm 1m
+			color
+		}
+		pyramid
+		{
+			2.5m 190cm
+			2m 180cm 70cm
+			translate { 0 1m 0 }
+
+		}
+		// hauteur 1.7m, long. 4.5m
+		wheel { translate -1m  1.3m 0 }
+		wheel { translate -1m -1.3m 0 }
+		wheel { translate  1m -1.3m 0 }
+		wheel { translate  1m  1.3m 0 }
+	}
+
+	build
+	{
+		needs
+		{
+			steel 500kg;
+			plastic 100kg;
+			wire 1km;
+			water 1000l;
+		}
+	}
+
+	move
+	{
+		needs driver;
+		follow road;
+		speed 100km/h;
+		acceleration 0.1m/s2;
+	}
+}
+
+item wood
+{
+	draw 3d;
+	
+}
+
+resource forest_small
+{
+	area 4x4
+	draw 3d ??? (dynamic);
+	production
+	{
+		item wood;
+		quantity 5t/day;
+	}
+}
+
+resource forest_medium
+{
+	area 6x6;
+	draw 3d ??? (dynamic);
+	production wood 10t/day;
+}
+
+resource forest_large
+{
+	area 8x8;
+	draw 3d ??? (dynamic);
+	production wood 10t/day;
+}
+
+resource coal
+{
+	area 6x6;
+	draw 3d
+	{
+	}
+
+	draw dynamic
+	{
+	}
+	
+	production
+	{
+		// [5-10] = random value
+		item coal [5-10]t/day;
+	}
+}
+
+item truck_wood
+{
+	draw 3d;
+	build;;
+
+	move
+	{
+		follow road;
+		speed 60km/h;
+	}
+	carry
+	{
+		class wood;
+		quantity 2t;
+	}
+}
+
+item train_8
+{
+	class train;
+	chain {
+		class engine;
+		class wagon;
+		length 8; 
+	}
+}
+
+item wagon_humain
+{
+	class wagon;
+	chain {
+		class wagon;
+		size -1;
+	}
+}
+
+item copper
+{
+	density 8.96;
+	draw none;
+	icon ?;
+}
+
+item wire
+{
+	build
+	{
+		needs
+		{
+			copper 1m;
+			plastic 5g;
+		}
+		weight 25g;
+	}
+	draw none;
+	icon ?;
+}
+
+item car_red : car(
+texture { red })

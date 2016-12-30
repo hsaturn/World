@@ -1,0 +1,39 @@
+item wheel
+{
+	draw 3d
+	{
+		cylinder
+		{
+			60cm 20cm
+			texture black wheel.png
+			rotate { 1 0 0 }
+		}
+	}
+}
+
+item car(color)
+{
+	draw 3d
+	{
+		pyramid
+		{
+			4.5m 190cm
+			4.m  190cm 1m
+			color
+		}
+		pyramid
+		{
+			2.5m 190cm
+			2m 180cm 70cm
+			translate { 0 1m 0 }
+
+		}
+		// hauteur 1.7m, long. 4.5m
+		wheel { translate -1m  1.3m 0 }
+		wheel { translate -1m -1.3m 0 }
+		wheel { translate  1m -1.3m 0 }
+		wheel { translate  1m  1.3m 0 }
+	}
+}
+
+

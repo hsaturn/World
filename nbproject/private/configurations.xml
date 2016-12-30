@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="/home/hsaturn/Projets/C++/World" name="0">
+      <df name="CMakeFiles">
+        <df name="3.5.1">
+          <df name="CompilerIdC">
+            <in>CMakeCCompilerId.c</in>
+          </df>
+          <df name="CompilerIdCXX">
+            <in>CMakeCXXCompilerId.cpp</in>
+          </df>
+        </df>
+        <df name="CMakeTmp">
+        </df>
+        <df name="Progress">
+        </df>
+        <df name="world.dir">
+          <df name="src">
+          </df>
+        </df>
+        <in>feature_tests.c</in>
+        <in>feature_tests.cxx</in>
+      </df>
+      <df name="core">
+        <df name="include">
+          <in>object.h</in>
+        </df>
+        <df name="src">
+          <in>object.cpp</in>
+        </df>
+        <in>main.cpp</in>
+      </df>
+      <df name="cp">
+        <in>StringUtil.cpp</in>
+        <in>action.cpp</in>
+        <in>action.h</in>
+        <in>action_buy.cpp</in>
+        <in>action_buy.h</in>
+        <in>action_harvest.cpp</in>
+        <in>action_harvest.h</in>
+        <in>action_mix.cpp</in>
+        <in>action_mix.h</in>
+        <in>bot.cpp</in>
+        <in>bot.h</in>
+        <in>bot_conf.cpp</in>
+        <in>bot_conf.h</in>
+        <in>bot_lib.cpp</in>
+        <in>bot_queue.h</in>
+        <in>coord.cpp</in>
+        <in>coord.h</in>
+        <in>foo.cpp</in>
+        <in>foo.h</in>
+        <in>get.cpp</in>
+        <in>get.h</in>
+        <in>item.cpp</in>
+        <in>item.h</in>
+        <in>map.cpp</in>
+        <in>map.h</in>
+        <in>npc.cpp</in>
+        <in>npc.h</in>
+      </df>
+      <df name="src">
+        <in>object.cpp</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>/home/hsaturn/Projets/C++/World/Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,31 @@
+
+item /name/
+{
+
+}
+
+cylinder_
+{
+	%rayon, %height
+	%texture             [%texture   [%texture]]
+	// bande/top/bottom  top/bottom  bottom
+	
+	[ rotate { x,y,z}]
+}
+
+pyramid_
+{
+	// http://www.debart.fr/geogebra_3D/geogebra_3D_polyedre.html	
+	// AB length, BC length, A'B' length, B'C' length
+	// B=ABxBC h=A'y - Ay (hauteur)
+	// V = h/3 [B + b + rac(Bb) ].
+
+	%ab_length
+	%bc_length
+	[
+		%a'b'_length
+		%b'c'_length
+		%height
+	]
+}
+
