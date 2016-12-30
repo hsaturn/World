@@ -14,16 +14,34 @@
           </df>
           <df name="CMakeTmp">
           </df>
+          <df name="Progress">
+          </df>
           <df name="world.dir">
             <df name="core">
+              <in>main.cpp.o</in>
             </df>
             <df name="external">
               <df name="common">
+                <in>controls.cpp.o</in>
+                <in>objloader.cpp.o</in>
+                <in>quaternion_utils.cpp.o</in>
+                <in>shader.cpp.o</in>
+                <in>tangentspace.cpp.o</in>
+                <in>text2D.cpp.o</in>
+                <in>texture.cpp.o</in>
+                <in>vboindexer.cpp.o</in>
+              </df>
+              <df name="png_texture">
+                <in>png_texture.cpp.o</in>
               </df>
             </df>
           </df>
           <in>feature_tests.c</in>
           <in>feature_tests.cxx</in>
+        </df>
+        <df name="shaders">
+        </df>
+        <df name="textures">
         </df>
       </df>
       <df name="CMakeFiles">
@@ -109,8 +127,11 @@
           <in>png_texture.cpp</in>
           <in>png_texture.hpp</in>
         </df>
+        <in>README.md</in>
       </df>
       <df name="shaders">
+      </df>
+      <df name="textures">
       </df>
     </df>
     <itemPath>README.md</itemPath>
@@ -155,7 +176,7 @@
         </runcommandpicklist>
         <runcommand>"${OUTPUT_PATH}"</runcommand>
         <rundir>.</rundir>
-        <buildfirst>false</buildfirst>
+        <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>
         <environment>

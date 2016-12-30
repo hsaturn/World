@@ -6,18 +6,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <png.h>
+#include <string>
+#include <iostream>
 
-GLuint png_texture_load(const char * file_name, int * width, int * height)
+using namespace std;
+
+static const string TEXTURES = "textures/";
+
+GLuint png_texture_load(const char * File_name, int * width, int * height)
 {
+	string file_name = TEXTURES + File_name;
     // This function was originally written by David Grayson for
     // https://github.com/DavidEGrayson/ahrs-visualizer
 
     png_byte header[8];
 
-    FILE *fp = fopen(file_name, "rb");
+    FILE *fp = fopen(file_name.c_str(), "rb");
     if (fp == 0)
     {
-        perror(file_name);
+        perror(file_name.c_str());
         return 0;
     }
 
@@ -26,7 +33,7 @@ GLuint png_texture_load(const char * file_name, int * width, int * height)
 
     if (png_sig_cmp(header, 0, 8))
     {
-        fprintf(stderr, "error: %s is not a PNG.\n", file_name);
+        cerr << "error: " << file_name << " is not a PNG." << endl;
         fclose(fp);
         return 0;
     }
@@ -91,7 +98,7 @@ GLuint png_texture_load(const char * file_name, int * width, int * height)
 
     if (bit_depth != 8)
     {
-        fprintf(stderr, "%s: Unsupported bit depth %d.  Must be 8.\n", file_name, bit_depth);
+        cerr <<  file_name << "Unsupported bit depth "<< bit_depth << ".  Must be 8." << endl;
         return 0;
     }
 
@@ -105,7 +112,7 @@ GLuint png_texture_load(const char * file_name, int * width, int * height)
         format = GL_RGBA;
         break;
     default:
-        fprintf(stderr, "%s: Unknown libpng color type %d.\n", file_name, color_type);
+        cerr << file_name << "Unknown libpng color type #" << color_type << endl;
         return 0;
     }
 

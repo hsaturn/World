@@ -16,6 +16,7 @@ using namespace glm;
 
 #include <common/shader.hpp>
 #include <common/texture.hpp>
+#include <png_texture/png_texture.hpp>
 
 int main( void )
 {
@@ -64,7 +65,7 @@ int main( void )
 	glBindVertexArray(VertexArrayID);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint programID = LoadShaders( "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader" );
+	GLuint programID = LoadShaders( "tuto05.vert", "tuto05.frag" );
 
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");
@@ -84,7 +85,7 @@ int main( void )
 
 	// Load the texture using any two methods
 	//GLuint Texture = loadBMP_custom("uvtemplate.bmp");
-	GLuint Texture = loadDDS("uvtemplate.DDS");
+	GLuint Texture = png_texture_load("uvtemplate.png");
 	
 	// Get a handle for our "myTextureSampler" uniform
 	GLuint TextureID  = glGetUniformLocation(programID, "myTextureSampler");

@@ -6,13 +6,19 @@ This is a big project to learn and increase my c++ dev skills.
 
 ## Compilation
 
+See required libraries before trying to build World !
+
+cd build && cmake .. && make
+
 Tested on :
 
 * Kubuntu 16.04
 
-## Libraries
+## Required Libraries
 
 * libglfw3-dev
 
 * https://github.com/hsaturn/SaturnLib
-This library should be cloned in the same folder as World
+This library should be cloned in the same folder as World.
+
+cd SaturnLib && cmake . && sudo make install

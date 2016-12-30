@@ -2,6 +2,30 @@
 <configurationDescriptor version="97">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="build">
+        <df name="CMakeFiles">
+          <df name="world.dir">
+            <df name="core">
+              <in>main.cpp.o</in>
+            </df>
+            <df name="external">
+              <df name="common">
+                <in>controls.cpp.o</in>
+                <in>objloader.cpp.o</in>
+                <in>quaternion_utils.cpp.o</in>
+                <in>shader.cpp.o</in>
+                <in>tangentspace.cpp.o</in>
+                <in>text2D.cpp.o</in>
+                <in>texture.cpp.o</in>
+                <in>vboindexer.cpp.o</in>
+              </df>
+              <df name="png_texture">
+                <in>png_texture.cpp.o</in>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
       <df name="CMakeFiles">
         <df name="world.dir">
           <df name="core">
@@ -41,6 +65,9 @@
           <in>texture.cpp</in>
           <in>vboindexer.cpp</in>
         </df>
+        <df name="png_texture">
+          <in>png_texture.cpp</in>
+        </df>
       </df>
     </df>
     <logicalFolder name="ExternalFiles"
@@ -67,6 +94,9 @@
       <flagsDictionary>
         <element flagsID="0"
                  commonFlags="-mtune=generic -march=x86-64 -fstack-protector-strong"/>
+        <element flagsID="1"
+                 commonFlags="-mtune=generic -march=x86-64 -std=gnu++11 -fstack-protector-strong"/>
+        <element flagsID="2" commonFlags="-std=gnu++11"/>
       </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
@@ -75,7 +105,7 @@
           <buildCommandWorkingDir>build</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath></executablePath>
+          <executablePath>build/world</executablePath>
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>NewFolder</preBuildCommandWorkingDir>
@@ -129,15 +159,63 @@
             tool="1"
             flavor2="4">
       </item>
-      <item path="core/main.cpp" ex="false" tool="1" flavor2="4">
-        <ccTool flags="0">
+      <item path="build/CMakeFiles/world.dir/core/main.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/common/controls.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/common/objloader.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/common/quaternion_utils.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/common/shader.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/common/tangentspace.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/common/text2D.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/common/texture.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/common/vboindexer.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="build/CMakeFiles/world.dir/external/png_texture/png_texture.cpp.o"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="core/main.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
           <incDir>
-            <pElem>core</pElem>
-            <pElem>/usr/include/glm/detail</pElem>
-            <pElem>/usr/include/glm/gtc</pElem>
-            <pElem>/usr/include/GL</pElem>
+            <pElem>core/include</pElem>
+            <pElem>external</pElem>
+            <pElem>/usr/local/include/SaturnLib</pElem>
             <pElem>/usr/include/GLFW</pElem>
-            <pElem>/usr/include/glm</pElem>
             <pElem>build</pElem>
           </incDir>
         </ccTool>
@@ -146,8 +224,8 @@
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="external/common/controls.cpp" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+      <item path="external/common/controls.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
           <incDir>
             <pElem>/usr/include/glm/detail</pElem>
             <pElem>/usr/include/glm/gtc</pElem>
@@ -157,8 +235,8 @@
           </incDir>
         </ccTool>
       </item>
-      <item path="external/common/objloader.cpp" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+      <item path="external/common/objloader.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
           <incDir>
             <pElem>/usr/include/glm/detail</pElem>
             <pElem>/usr/include/glm</pElem>
@@ -169,8 +247,8 @@
       <item path="external/common/quaternion_utils.cpp"
             ex="false"
             tool="1"
-            flavor2="0">
-        <ccTool flags="0">
+            flavor2="8">
+        <ccTool flags="1">
           <incDir>
             <pElem>/usr/include/glm/detail</pElem>
             <pElem>/usr/include/glm/gtx</pElem>
@@ -180,16 +258,16 @@
           </incDir>
         </ccTool>
       </item>
-      <item path="external/common/shader.cpp" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+      <item path="external/common/shader.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
           <incDir>
             <pElem>/usr/include/GL</pElem>
             <pElem>build</pElem>
           </incDir>
         </ccTool>
       </item>
-      <item path="external/common/tangentspace.cpp" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+      <item path="external/common/tangentspace.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
           <incDir>
             <pElem>/usr/include/glm/detail</pElem>
             <pElem>/usr/include/glm</pElem>
@@ -197,8 +275,8 @@
           </incDir>
         </ccTool>
       </item>
-      <item path="external/common/text2D.cpp" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+      <item path="external/common/text2D.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
           <incDir>
             <pElem>/usr/include/glm/detail</pElem>
             <pElem>/usr/include/GL</pElem>
@@ -207,27 +285,41 @@
           </incDir>
         </ccTool>
       </item>
-      <item path="external/common/texture.cpp" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+      <item path="external/common/texture.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
           <incDir>
             <pElem>/usr/include/GL</pElem>
             <pElem>build</pElem>
           </incDir>
         </ccTool>
       </item>
-      <item path="external/common/vboindexer.cpp" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+      <item path="external/common/vboindexer.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
           <incDir>
             <pElem>/usr/include/glm/detail</pElem>
             <pElem>/usr/include/glm</pElem>
             <pElem>build</pElem>
           </incDir>
+        </ccTool>
+      </item>
+      <item path="external/png_texture/png_texture.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
         </ccTool>
       </item>
       <folder path="0/CMakeFiles">
         <ccTool>
           <incDir>
             <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/build">
+        <ccTool>
+          <incDir>
+            <pElem>build</pElem>
           </incDir>
         </ccTool>
       </folder>
@@ -245,6 +337,17 @@
         <ccTool>
           <incDir>
             <pElem>external/common</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/external/png_texture">
+        <ccTool>
+          <incDir>
+            <pElem>core/include</pElem>
+            <pElem>external</pElem>
+            <pElem>/usr/local/include/SaturnLib</pElem>
+            <pElem>/usr/include/GLFW</pElem>
+            <pElem>build</pElem>
           </incDir>
         </ccTool>
       </folder>
